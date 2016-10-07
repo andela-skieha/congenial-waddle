@@ -39,5 +39,5 @@ ReactDOM.render(
   <KanbanBoard
     cards={cardsList}
   />,
-document.getElementById('root')
+  document.getElementById('root')
 );

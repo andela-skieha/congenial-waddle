@@ -18,7 +18,7 @@ const Card = function Card(props) {
 Card.propTypes = {
   title: React.PropTypes.string,
   description: React.PropTypes.string,
-  tasks: React.PropTypes.string,
+  tasks: React.PropTypes.instanceOf(Array),
   id: React.PropTypes.number,
 };
 
