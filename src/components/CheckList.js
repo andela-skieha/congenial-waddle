@@ -3,7 +3,7 @@ import React from 'react';
 const CheckList = (props) => {
   const singleTask = function singleTask(task) {
     return (
-      <li className="checklist__task">
+      <li key={task.id} className="checklist__task">
         <input type="checkbox" defaultChecked={task.done} />
         {task.name}
         <button href="#" className="checklist__task--remove" />
