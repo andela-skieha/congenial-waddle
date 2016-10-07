@@ -1,0 +1,32 @@
+{
+  "name": "congenial-waddle",
+  "version": "1.0.0",
+  "description": "Kanban-like app built with react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-skieha/congenial-waddle.git"
+  },
+  "author": "Njeri Kieha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andela-skieha/congenial-waddle/issues"
+  },
+  "homepage": "https://github.com/andela-skieha/congenial-waddle#readme",
+  "devDependencies": {
+    "eslint": "^3.6.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0",
+    "http-server": "^0.9.0"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1"
+  }
+}
