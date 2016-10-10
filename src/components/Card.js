@@ -35,6 +35,7 @@ class Card extends Component {
         handleDetailsToggle={this.handleDetailsToggle}
         cardDetails={cardDetails}
         title={this.props.title}
+        color={this.props.color}
       />
     );
   }
@@ -45,6 +46,7 @@ Card.propTypes = {
   description: React.PropTypes.string,
   tasks: React.PropTypes.instanceOf(Array),
   id: React.PropTypes.number,
+  color: React.PropTypes.string,
 };
 
 module.exports = Card;
