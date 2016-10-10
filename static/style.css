@@ -75,6 +75,14 @@ ul {
   content: '▾';
 }
 
+.checklist--add-task {
+  border: 1px dashed #bbb;
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
 .checklist__task:first-child {
   margin-top: 10px;
   padding-top: 10px;
