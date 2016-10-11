@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Jacek Spolnik",
+  "license": "MIT",
+  "dependencies": {
+    "bunyan": "^1.8.0",
+    "nedb": "^1.8.0",
+    "restify": "^4.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^2.0.0"
+  }
+}
