@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import marked from 'marked';
 
 import CheckList from './CheckList';
@@ -42,11 +42,11 @@ class Card extends Component {
 }
 
 Card.propTypes = {
-  title: React.PropTypes.string,
-  description: React.PropTypes.string,
-  tasks: React.PropTypes.instanceOf(Array),
-  id: React.PropTypes.number,
-  color: React.PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  tasks: PropTypes.arrayOf(PropTypes.object),
+  id: PropTypes.number,
+  color: PropTypes.string,
 };
 
 module.exports = Card;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import List from './List';
 
 const KanbanBoard = function KanbanBoard(props) {
@@ -24,7 +24,7 @@ const KanbanBoard = function KanbanBoard(props) {
 };
 
 KanbanBoard.propTypes = {
-  cards: React.PropTypes.instanceOf(Array),
+  cards: PropTypes.arrayOf(PropTypes.object),
 };
 
 module.exports = KanbanBoard;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const CheckList = (props) => {
   const singleTask = function singleTask(task) {
@@ -26,7 +26,7 @@ const CheckList = (props) => {
 };
 
 CheckList.propTypes = {
-  tasks: React.PropTypes.instanceOf(Array),
+  tasks: PropTypes.arrayOf(PropTypes.object),
 };
 
 module.exports = CheckList;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Card from './Card';
 
 const List = (props) => {
@@ -26,8 +26,8 @@ const List = (props) => {
 };
 
 List.propTypes = {
-  cards: React.PropTypes.instanceOf(Array),
-  title: React.PropTypes.string,
+  cards: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string.isRequired,
 };
 
 module.exports = List;

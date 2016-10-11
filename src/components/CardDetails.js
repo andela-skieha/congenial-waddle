@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const CardDetails = (props) => {
   const sideColor = {
@@ -30,11 +30,11 @@ const CardDetails = (props) => {
 };
 
 CardDetails.propTypes = {
-  title: React.PropTypes.string,
-  handleDetailsToggle: React.PropTypes.func,
-  cardDetails: React.PropTypes.element,
-  showDetails: React.PropTypes.bool,
-  color: React.PropTypes.string,
+  title: PropTypes.string,
+  handleDetailsToggle: PropTypes.func,
+  cardDetails: PropTypes.element,
+  showDetails: PropTypes.bool,
+  color: PropTypes.string,
 };
 
 module.exports = CardDetails;
