@@ -1,10 +1,21 @@
 /* eslint-disable react/no-danger */
+/* eslint-disable consistent-return */
+
 
 import React, { Component, PropTypes } from 'react';
 import marked from 'marked';
 
 import CheckList from './CheckList';
 import CardDetails from './CardDetails';
+
+const titlePropType = (props, propName, componentName) => {
+  if (props[propName]) {
+    const value = props[propName];
+    if (typeof value !== 'string' || value.length > 80) {
+      return new Error(`${propName} in ${componentName} is longer than 80 characters.`);
+    }
+  }
+};
 
 class Card extends Component {
   constructor(...args) {
@@ -42,7 +53,7 @@ class Card extends Component {
 }
 
 Card.propTypes = {
-  title: PropTypes.string,
+  title: titlePropType,
   description: PropTypes.string,
   tasks: PropTypes.arrayOf(PropTypes.object),
   id: PropTypes.number,
