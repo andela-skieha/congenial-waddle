@@ -1,7 +1,6 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable consistent-return */
 
-
 import React, { Component, PropTypes } from 'react';
 import marked from 'marked';
 
@@ -36,10 +35,17 @@ class Card extends Component {
       cardDetails = (
         <div className="card__details">
           <span dangerouslySetInnerHTML={{ __html: marked(this.props.description) }} />
-          <CheckList cardId={this.props.id} tasks={this.props.tasks} />
+          <CheckList
+            cardId={this.props.id}
+            tasks={this.props.tasks}
+            toggleTask={this.props.toggleTask}
+            deleteTask={this.props.deleteTask}
+            addTask={this.props.addTask}
+          />
         </div>
       );
     }
+
     return (
       <CardDetails
         showDetails={this.state.showDetails}
@@ -58,6 +64,9 @@ Card.propTypes = {
   tasks: PropTypes.arrayOf(PropTypes.object),
   id: PropTypes.number,
   color: PropTypes.string,
+  toggleTask: PropTypes.func,
+  addTask: PropTypes.func,
+  deleteTask: PropTypes.func,
 };
 
 module.exports = Card;
